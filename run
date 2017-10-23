@@ -3,7 +3,7 @@
 docker ps -a | grep test
 status=$?
 if [ $status -ne 0 ]; then
-	docker run -ti --name test edgararguelles/test
+	docker run -it --name test edgararguelles/docker-test
 else
-	docker start test
+	docker start -i test
 fi
